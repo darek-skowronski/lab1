@@ -11,9 +11,9 @@
             function getJson() {
                 var xobj = new XMLHttpRequest();
                 
-                xobj.open('GET', 'js/data.json', true);
+                xobj.open('GET', '//projektowanie.local/js/data.json', true);
                 xobj.onreadystatechange = function() {
-                    if(xobj.readyState == 4 && xobj.status == '200') {
+                    if(xobj.readyState == 4 && xobj.status == 200) {
                         data = JSON.parse(this.responseText).data;
                     }
                 }
@@ -30,7 +30,7 @@
                 for(i = 0; i < data.length; i ++) {
                     if(imie == data[i].imie && nazwisko == data[i].nazwisko) {
                         znaleziono = true;
-                        document.getElementById("wynik").innerHTML = "Imie: " + data[i].imie + ", nazwisko: " + data[i].nazwisko;
+                        document.getElementById("wynik").innerHTML = JSON.stringify(data[i]);
                     }
                 }
                 
@@ -57,6 +57,6 @@
             </div>
         </form>
         
-        <div id="wynik"></div>
+        <pre id="wynik"></pre>
     </body>
 </html>
