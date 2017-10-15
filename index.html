@@ -6,17 +6,15 @@
         <title>Lab1</title>
         
         <script type="text/javascript">
-            var data = [];
+            var data;
             
             function getJson() {
                 var xobj = new XMLHttpRequest();
                 
-                xobj.overrideMimeType('application/json');
                 xobj.open('GET', 'js/data.json', true);
                 xobj.onreadystatechange = function() {
                     if(xobj.readyState == 4 && xobj.status == '200') {
-                        var data = xobj.responseText;
-                        console.log(data);
+                        data = JSON.parse(this.responseText).data;
                     }
                 }
                 xobj.send(null);
@@ -25,9 +23,19 @@
             function szukaj(event) {
                 event.preventDefault();
                 
+                var znaleziono = false;
+                var imie = document.getElementById("imie").value;
+                var nazwisko = document.getElementById("nazwisko").value;
                 
+                for(i = 0; i < data.length; i ++) {
+                    if(imie == data[i].imie && nazwisko == data[i].nazwisko) {
+                        znaleziono = true;
+                        document.getElementById("wynik").innerHTML = "Imie: " + data[i].imie + ", nazwisko: " + data[i].nazwisko;
+                    }
+                }
                 
-                document.getElementById("wynik").innerHTML = "Nie znaleziono";
+                if(!znaleziono)
+                    document.getElementById("wynik").innerHTML = "Nie znaleziono";
             }
         </script>
     </head>

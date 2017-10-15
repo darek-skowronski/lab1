@@ -1,8 +1,8 @@
-[
+{"data": [
     {
         "imie": "Darek",
         "nazwisko": "Skowroński",
-        "album": 5060,
+        "album": "5069",
         "przedmioty": [
             {
                 "nazwa": "Technologie internetowe w programowaniu",
@@ -30,7 +30,7 @@
     {
         "imie": "Darek",
         "nazwisko": "Skowroński",
-        "album": 5060,
+        "album": "5069",
         "przedmioty": [
             {
                 "nazwa": "Technologie internetowe w programowaniu",
@@ -54,11 +54,11 @@
                 }
             }
         ]
-    }, 
+    },
     {
         "imie": "Darek",
         "nazwisko": "Skowroński",
-        "album": 5060,
+        "album": "5069",
         "przedmioty": [
             {
                 "nazwa": "Technologie internetowe w programowaniu",
@@ -83,4 +83,4 @@
             }
         ]
     }
-]
+]}
