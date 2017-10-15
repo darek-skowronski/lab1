@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lab1</title>
+        
+        <script type="text/javascript">
+            var data = [];
+            
+            function getJson() {
+                var xobj = new XMLHttpRequest();
+                
+                xobj.overrideMimeType('application/json');
+                xobj.open('GET', 'js/data.json', true);
+                xobj.onreadystatechange = function() {
+                    if(xobj.readyState == 4 && xobj.status == '200') {
+                        var data = xobj.responseText;
+                        console.log(data);
+                    }
+                }
+                xobj.send(null);
+            }
+            
+            function szukaj(event) {
+                event.preventDefault();
+                
+                
+                
+                document.getElementById("wynik").innerHTML = "Nie znaleziono";
+            }
+        </script>
+    </head>
+    
+    <body onload="getJson();">
+        <form onsubmit="szukaj(event);">
+            <div>
+                <label for="imie">Imie</label>
+                <input type="text" id="imie" value="">
+            </div>
+                
+            <div>
+                <label for="nazwisko">Nazwisko</label>
+                <input type="text" id="nazwisko" value="">
+            </div>
+            
+            <div>
+                <button type="submit">Szukaj</button>
+            </div>
+        </form>
+        
+        <div id="wynik"></div>
+    </body>
+</html>

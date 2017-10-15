@@ -1,0 +1,86 @@
+[
+    {
+        "imie": "Darek",
+        "nazwisko": "Skowroński",
+        "album": 5060,
+        "przedmioty": [
+            {
+                "nazwa": "Technologie internetowe w programowaniu",
+                "prowadzacy": {
+                    "imie": "Michał",
+                    "nazwisko": "Simiński"
+                }
+            },
+            {
+                "nazwa": "Matematyka konkretna",
+                "prowadzacy": {
+                    "imie": "Michał",
+                    "nazwisko": "Simiński"
+                }
+            },
+            {
+                "nazwa": "Analiza i modelowanie danych",
+                "prowadzacy": {
+                    "imie": "Michał",
+                    "nazwisko": "Simiński"
+                }
+            }
+        ]
+    },
+    {
+        "imie": "Darek",
+        "nazwisko": "Skowroński",
+        "album": 5060,
+        "przedmioty": [
+            {
+                "nazwa": "Technologie internetowe w programowaniu",
+                "prowadzacy": {
+                    "imie": "Michał",
+                    "nazwisko": "Simiński"
+                }
+            },
+            {
+                "nazwa": "Matematyka konkretna",
+                "prowadzacy": {
+                    "imie": "Michał",
+                    "nazwisko": "Simiński"
+                }
+            },
+            {
+                "nazwa": "Analiza i modelowanie danych",
+                "prowadzacy": {
+                    "imie": "Michał",
+                    "nazwisko": "Simiński"
+                }
+            }
+        ]
+    }, 
+    {
+        "imie": "Darek",
+        "nazwisko": "Skowroński",
+        "album": 5060,
+        "przedmioty": [
+            {
+                "nazwa": "Technologie internetowe w programowaniu",
+                "prowadzacy": {
+                    "imie": "Michał",
+                    "nazwisko": "Simiński"
+                }
+            },
+            {
+                "nazwa": "Matematyka konkretna",
+                "prowadzacy": {
+                    "imie": "Michał",
+                    "nazwisko": "Simiński"
+                }
+            },
+            {
+                "nazwa": "Analiza i modelowanie danych",
+                "prowadzacy": {
+                    "imie": "Michał",
+                    "nazwisko": "Simiński"
+                }
+            }
+        ]
+    }
+]
