@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lab1</title>
+        
+        <script type="text/javascript">
+            function sprawdz(event) {
+                event.preventDefault();
+                
+                var data = new FormData();
+                data.append('firstName', document.getElementById('imie').value);
+                data.append('lastName', document.getElementById('nazwisko').value);
+                data.append('classes', document.getElementById('przedmiot').value);
+                
+                var proxy = 'https://cors-anywhere.herokuapp.com/'
+                
+                var xobj = new XMLHttpRequest();
+                
+                xobj.open('POST', proxy + document.getElementById('formularz').getAttribute('action'), true);
+                xobj.onreadystatechange = function() {
+                    if(xobj.readyState == 4 && xobj.status == 200) {
+                        document.getElementById('wynik').innerHTML = this.responseText;
+                    }
+                }
+                xobj.send(data);
+            }
+        </script>
+    </head>
+    
+    <body>
+        <form action="http://siminskidevelopment.siminskionline.pl/mgr/lab1.php" method="post" onsubmit="sprawdz(event);" id="formularz">
+            <div>
+                <label for="imie">Imie</label>
+                <input type="text" id="imie" value="">
+            </div>
+                
+            <div>
+                <label for="nazwisko">Nazwisko</label>
+                <input type="text" id="nazwisko" value="">
+            </div>
+                
+            <div>
+                <label for="przedmiot">Przedmiot</label>
+                <input type="text" id="przedmiot" value="">
+            </div>
+            
+            <div>
+                <button type="submit">Sprawdź</button>
+            </div>
+        </form>
+        
+        <pre id="wynik"></pre>
+        
+        <hr>
+        
+        <a href="/index.html">Główna</a>
+    </body>
+</html>
